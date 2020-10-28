@@ -1,3 +1,7 @@
+/* Used fonts
+    font-family: 'Bitter', serif;
+    font-family: 'Raleway', sans-serif;
+*/
 :root {
     --b_green: #4cb44c;
     --b_red: #e72020;
@@ -19,6 +23,7 @@ body {
     margin: 0;
     background-color: var(--vody);
     color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
 }
 h1 {
     font-size: 3em;
@@ -26,6 +31,9 @@ h1 {
 h2, h3 {
     font-size: 1.75em;
     padding: 10px;
+}
+h1, h2, h3, ul {
+    font-family: 'Bitter', serif;
 }
 @media screen and (max-width: 1000px) {
     h1 {
