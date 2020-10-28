@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Grid Layout Assignment 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content">Content</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+<style>
+    .header {
+        grid-area: header;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .content {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+    }
+</style>
+</html>
