@@ -20,61 +20,34 @@
         </div>
         <div class="item content">
             <div  class='above_text'>
-                <button>New Note</button>
-                <button>Dark Theme</button>
+                <button class='button_new'>New Note</button>
+                <button class='button_theme'>Dark Theme</button>
             </div>
             <textarea name="Notes" id="Note_Area" cols="30" rows="10" placeholder="This is a place holder"></textarea>
             <div class='bellow_text'>
-                <button>Save</button>
-                <button>Cancel</button>
+                <button class='button_save'>Save</button>
+                <button class='button_cancel'>Cancel</button>
             </div>
         </div>
         <div class="item footer">
             <h3>Keep in Touch</h3>
-            <img src="" alt="">
-            <img src="" alt="">
+            <div class='social_media'>
+                <img src="snapchat.svg" alt="Snapchat Logo">
+                <img src="youtube.svg" alt="Youtube Logo">
+            </div>
         </div>
     </div>
 </body>
 <style>
-    .header {
-        grid-area: header;
-    }
-    .sidebar {
-        grid-area: sidebar;
-        background-color: antiquewhite;
+    .button_new, .button_save {
+    background-color: var(--b_green);
+}
+    .button_cancel {
+        background-color: var(--b_red);
     }
 
-    .content {
-        grid-area: main;
-        display: grid;
-        background: azure;
-        padding: 10px;
-        margin: 10px;
-    }
-    .footer {
-        display: grid;
-        justify-items: center;
-        grid-area: footer;
-    }
-    .above_text {
-        display: flex;
-        justify-content: start;
-        padding: 10px;
-    }
-    .bellow_text {
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-    }
-    textarea {
-        width: 85%;
-        height: 85%;
-        padding: 10px;
-    }
-    button {
-        margin: 10px;
-        border-radius: 5px;
+    .button_theme {
+        background-color: var(--b_grey);
     }
 </style>
 </html>
