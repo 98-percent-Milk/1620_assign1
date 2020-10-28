@@ -8,10 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <div class="item header">Header</div>
-        <div class="item sidebar">Sidebar</div>
-        <div class="item content">Content</div>
-        <div class="item footer">Footer</div>
+        <div class="item header">
+            <h2>Take Better Notes</h2>
+        </div>
+        <div class="item sidebar">
+            <h3>My Notes</h3>
+            <ul>
+                <li>note one</li>
+                <li>note two</li>
+            </ul>
+        </div>
+        <div class="item content">
+            <div  class='above_text'>
+                <button>New Note</button>
+                <button>Dark Theme</button>
+            </div>
+            <textarea name="Notes" id="Note_Area" cols="30" rows="10" placeholder="This is a place holder"></textarea>
+            <div class='bellow_text'>
+                <button>Save</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+        <div class="item footer">
+            <h3>Keep in Touch</h3>
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
     </div>
 </body>
 <style>
@@ -20,13 +42,39 @@
     }
     .sidebar {
         grid-area: sidebar;
+        background-color: antiquewhite;
     }
 
     .content {
         grid-area: main;
+        display: grid;
+        background: azure;
+        padding: 10px;
+        margin: 10px;
     }
     .footer {
+        display: grid;
+        justify-items: center;
         grid-area: footer;
+    }
+    .above_text {
+        display: flex;
+        justify-content: start;
+        padding: 10px;
+    }
+    .bellow_text {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    textarea {
+        width: 85%;
+        height: 85%;
+        padding: 10px;
+    }
+    button {
+        margin: 10px;
+        border-radius: 5px;
     }
 </style>
 </html>
