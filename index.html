@@ -21,13 +21,13 @@
         </div>
         <div class="content">
             <div  class='above_text'>
-                <button class='button_new'>New Note</button>
-                <button class='button_theme'>Dark Theme</button>
+                <button class='button_new' type='button' onclick="clearTextArea()">New Note</button>
+                <button class='button_theme' type='button' onclick="coolTheme()">Dark Theme</button>
             </div>
-            <textarea name="Notes" id="Note_Area" cols="30" rows="10" placeholder="This is a place holder"></textarea>
+            <textarea name="Notes" id="Note_Area" cols="30" rows="10" placeholder="Feed me with Notes"></textarea>
             <div class='bellow_text'>
-                <button class='button_save'>Save</button>
-                <button class='button_cancel'>Cancel</button>
+                <button class='button_save' type='button' onclick="saveNote()">Save</button>
+                <button class='button_cancel' type='button' onclick="clearTextArea()">Cancel</button>
             </div>
         </div>
         <div class="footer">
