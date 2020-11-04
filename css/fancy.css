@@ -1,0 +1,245 @@
+/*  
+    Used fonts
+    font-family: 'Bitter', serif;
+    font-family: 'Raleway', sans-serif;
+*/
+:root {
+    --b_green: #4cb44c;
+    --b_red: #e72020;
+    --b_grey: #645e5e;
+    --body: #F0F0F0;
+    --header: #A675A1;
+    --footer: #8F3985;
+    --content: #EFD9CE;
+    --sidebar: #CEA2AC;
+}
+/*----------General-------------*/
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background-color: var(--vody);
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+    font-size: 3em;
+}
+h2, h3 {
+    font-size: 1.75em;
+    padding: 10px;
+}
+h1, h2, h3, ul {
+    font-family: 'Bitter', serif;
+}
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2, h3 {
+        font-size: 1.5em;
+    }
+}
+/*----------Grid Layout-------------*/
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 150px 1fr 150px;
+    grid-template-areas: 
+    "header    header"
+    "sidebar    main"
+    "footer     footer";
+}
+li:hover {
+    color:var(--footer);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 1.25em;
+    }
+    .sidebar {
+        text-align: center;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        padding: 0;
+        background-color: var(--sidebar);  
+    }
+    li {
+        display: inline-block;
+    }
+    li:hover {
+        background: var(--content);
+        cursor: pointer;
+    }
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: 150px 1fr 1fr 150px;
+        grid-gap: 0;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    }
+
+}
+.header {
+    grid-area: header;
+    text-align: center;
+    background-color: var(--header);
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--sidebar);
+}
+
+
+/*----------Content-------------*/
+.content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 10px;
+    background-color: var(--content);
+}
+.content > div {
+    display: grid;
+    place-items: center center;
+}
+
+.content button {
+    width: 10vw;
+    height: 5vw;
+    font-size: 2vw;
+}
+
+textarea {
+    width: 85%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: inherit;
+}
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.button_new, .button_save {
+    background-color: var(--b_green);
+}
+.button_cancel {
+    background-color: var(--b_red);
+}
+.button_theme {
+    background-color: #57737A;
+}
+
+.notes {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+}
+/*----------Footer-------------*/
+img {
+    width: 100%;
+    padding-bottom: 10px;
+}
+.footer > h3 {
+    padding: 0;
+}
+.footer {
+    display: grid;
+    justify-items: center;
+    grid-area: footer;
+    background-color: var(--footer)
+}
+.social_media {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-gap: 20px;
+}
+
+
+/*----------Overlay-------------*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: none;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "left middle right"
+    "footer footer footer";
+}
+
+.overlay > div {
+    grid-area: middle;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.overlay > div div {
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+}
+
+.overlay > div > textarea {
+    border: 1px solid black;
+    width: 100%;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 1.5vw;
+}
+
+.note_taking button {
+    width: 7vw;
+    height: 3vw;
+    font-size: 1.5vw;
+}
+
+.overlay > .note_taking {
+    display: none;
+}
+
+.overlay > .note_display {
+    padding: 10px;
+    display: none;
+    grid-area: middle;
+    color: black;
+    place-content: center center;
+    border: 1px solid black;
+}
