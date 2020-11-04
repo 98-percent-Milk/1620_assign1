@@ -6,11 +6,11 @@
     --b_green: #4cb44c;
     --b_red: #e72020;
     --b_grey: #645e5e;
-    --body: #D7DAE5;
-    --blue: #048BA8;
-    --charcoal: #2E4057;
-    --rose: #C97B84;
-    --redwood: #A85751;
+    --body: #F0F0F0;
+    --header: #A675A1;
+    --footer: #8F3985;
+    --content: #EFD9CE;
+    --sidebar: #CEA2AC;
 }
 /*----------General-------------*/
 *, *::before, *::after {
@@ -56,7 +56,7 @@ h1, h2, h3, ul {
     "footer     footer";
 }
 li:hover {
-    color:var(--charcoal);
+    color:var(--footer);
 }
 @media screen and (max-width: 640px) {
     body {
@@ -69,13 +69,13 @@ li:hover {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
         padding: 0;
-        background-color: var(--redwood);  
+        background-color: var(--sidebar);  
     }
     li {
         display: inline-block;
     }
     li:hover {
-        background: var(--rose);
+        background: var(--content);
         cursor: pointer;
     }
     .container {
@@ -93,11 +93,11 @@ li:hover {
 .header {
     grid-area: header;
     text-align: center;
-    background-color: var(--blue);
+    background-color: var(--header);
 }
 .sidebar {
     grid-area: sidebar;
-    background-color: var(--redwood);
+    background-color: var(--sidebar);
 }
 
 
@@ -106,7 +106,7 @@ li:hover {
     grid-area: main;
     display: grid;
     padding: 10px;
-    background-color: var(--rose);
+    background-color: var(--content);
 }
 
 .above_text {
@@ -133,7 +133,7 @@ button {
     padding: 10px;
     border-radius: 10px;
     border-style: none;
-    color: white;
+    color: inherit;
 }
 button:hover {
     opacity: 0.6;
@@ -146,7 +146,7 @@ button:hover {
     background-color: var(--b_red);
 }
 .button_theme {
-    background-color: var(--charcoal);
+    background-color: #57737A;
 }
 
 /*----------Footer-------------*/
@@ -161,7 +161,7 @@ img {
     display: grid;
     justify-items: center;
     grid-area: footer;
-    background-color: var(--charcoal)
+    background-color: var(--footer)
 }
 .social_media {
     display: grid;
