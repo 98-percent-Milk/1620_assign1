@@ -57,6 +57,7 @@ h1, h2, h3, ul {
 }
 li:hover {
     color:var(--footer);
+    cursor: pointer;
 }
 @media screen and (max-width: 640px) {
     body {
@@ -69,10 +70,11 @@ li:hover {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
         padding: 0;
-        background-color: var(--sidebar);  
+        background-color: var(--sidebar);
     }
     li {
         display: inline-block;
+        /* background-color: var(--sidebar); */
     }
     li:hover {
         background: var(--content);
